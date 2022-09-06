@@ -1,5 +1,8 @@
 package School;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Teacher extends Person {
     private String department;
 
@@ -7,6 +10,8 @@ public class Teacher extends Person {
         super(id, name, surname, birthday);
         setDepartment(department);
     }
+
+    private List<Teacher> teacherList = new ArrayList<>();
 
 
 
@@ -17,4 +22,18 @@ public class Teacher extends Person {
     public void setDepartment(String department) {
         this.department = department;
     }
+
+    public List<Teacher> getTeacherList() {
+        return teacherList;
+    }
+
+    public void setTeacherList(List<Teacher> teacherList) {
+        this.teacherList = teacherList;
+    }
+
+    @Override
+    public String toString() {
+        return this.getId() + " " + this.getName() + " " + this.getSurname() + " " + this.getBirthday() + " " + this.getDepartment();
+    }
+
 }

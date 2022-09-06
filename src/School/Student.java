@@ -15,4 +15,9 @@ public class Student extends Person {
     public Student(Integer id, String name, String surname, String birthday) {
         super(id, name, surname, birthday);
     }
+
+    @Override
+    public String toString() {
+        return this.getId() +" "+ this.getName() +" "+ this.getSurname() + " " + this.getBirthday() ;
+    }
 }
